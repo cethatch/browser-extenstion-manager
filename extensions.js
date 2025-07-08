@@ -6,7 +6,7 @@
 let extensions = [];
 main();
 
-function renderExtensions(extensions, filter) {
+function renderExtensions(filter) {
     const container = document.getElementById('tile-container');
     
     // clear previous HTML to re-render the tiles
@@ -104,7 +104,7 @@ function deleteExtensionByName(name) {
     renderExtensions(extensions);
 }
 
-function renderFilterButtons(extensions, filterState) {
+function renderFilterButtons(filterState) {
     const container = document.getElementById('filter-buttons-container');
     container.innerHTML = '';
     const filterOptions = ['All', 'Active', 'Inactive'];
@@ -115,6 +115,8 @@ function renderFilterButtons(extensions, filterState) {
 
         if (filter == filterState) {
             button.classList.add('filterOn');
+        } else {
+            button.classList.add('filterOff');
         }
 
         button.addEventListener('click', () => {
@@ -126,8 +128,8 @@ function renderFilterButtons(extensions, filterState) {
 }
 
 function changeFilter(newFilter) {
-    renderFilterButtons(extensions, newFilter);
-    renderExtensions(extensions, newFilter);
+    renderFilterButtons(newFilter);
+    renderExtensions(newFilter);
 }
 
 function main() {
@@ -137,10 +139,11 @@ function main() {
     fetch('./data.json')
         .then(response => response.json())
         .then(data => {
+
             extensions = data;
 
-            renderFilterButtons(extensions, defaultFilter);
-            renderExtensions(extensions, defaultFilter);
+            renderFilterButtons(defaultFilter);
+            renderExtensions(defaultFilter);
         })
         .catch(error => {
             console.error('Error rendering extensions:', error);
