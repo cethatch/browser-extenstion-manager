@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link id='theme-stylesheet' rel="stylesheet" type="text/css" href="./styles/light.css">
   
   <title>Frontend Mentor | Browser extensions manager UI</title>
 
@@ -21,27 +22,25 @@
       <img src="./assets/images/logo.svg" alt="Extension manager logo">
     </div>
     <div id="light-dark-button-container">
-      <button id="colorMode">
-        <img src="./assets/images/icon-moon.svg">
+      <button id="color-mode">
+        <img id='theme-icon' src="./assets/images/icon-moon.svg">
       </button>
     </div>
   </header>
 
     <h3>Extensions List</h3>
     
-    <div id="filter-buttons-container">
-      <button>All</button>
-      <button>Active</button>
-      <button>Inactive</button>
-    </div>
+    <div id="filter-buttons-container"></div>
 
     <div id="tile-container" class="tileContainer"></div>
-    <script src="./loadExtensions.js"></script>
+    <script src="./extensions.js"></script>
     
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/cethatch/browser-extenstion-manager">cethatch</a>.
   </div>
+
+<script src="./toggleTheme.js"></script>
 </body>
 </html>
