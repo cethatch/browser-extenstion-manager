@@ -35,7 +35,7 @@ Users should be able to:
 ### Screenshots
 
 #### Light mode:
-![](assets/screen-captures/Screenshot 2025-07-08 at 7.32.02 PM.jpeg)
+![](assets/screen-captures/light-mode.jpeg)
 
 #### Dark mode:
 ![](./assets/screen-captures/Screenshot 2025-07-08 at 7.32.21 PM.jpeg)
