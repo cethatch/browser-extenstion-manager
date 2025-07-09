@@ -4,9 +4,10 @@
 // to generate DOM components for each extension to display them in the UI.
 
 let extensions = [];
+let filterState = 'All';
 main();
 
-function renderExtensions(filter) {
+function renderExtensions() {
     const container = document.getElementById('tile-container');
     
     // clear previous HTML to re-render the tiles
@@ -14,9 +15,9 @@ function renderExtensions(filter) {
 
     let filtered = extensions;
 
-    if (filter === 'Active') {
+    if (filterState === 'Active') {
         filtered = extensions.filter(ext => ext.isActive);
-    } else if (filter === 'Inactive') {
+    } else if (filterState === 'Inactive') {
         filtered = extensions.filter(ext => !ext.isActive);
     }
 
@@ -101,49 +102,48 @@ function renderExtensions(filter) {
 // Re-renders the extensions
 function deleteExtensionByName(name) {
     extensions = extensions.filter(ext => ext.name !== name);
-    renderExtensions(extensions);
+    renderExtensions();
 }
 
-function renderFilterButtons(filterState) {
+function renderFilterButtons() {
     const container = document.getElementById('filter-buttons-container');
     container.innerHTML = '';
     const filterOptions = ['All', 'Active', 'Inactive'];
-    filterOptions.forEach(filter => {
+    filterOptions.forEach(option => {
         const button = document.createElement('button');
-        button.innerText = filter;
+        button.innerText = option;
         button.classList.add('filter-button');
 
-        if (filter == filterState) {
+        if (option == filterState) {
             button.classList.add('filterOn');
         } else {
             button.classList.add('filterOff');
         }
 
         button.addEventListener('click', () => {
-            changeFilter(filter);
+            changeFilter(button.innerText);
         });
 
         container.appendChild(button);
     });
 }
 
-function changeFilter(newFilter) {
-    renderFilterButtons(newFilter);
-    renderExtensions(newFilter);
+function changeFilter(newFilterState) {
+    filterState = newFilterState;
+    renderFilterButtons();
+    renderExtensions();
 }
 
 function main() {
-    
-    let defaultFilter = 'All';
-    
+        
     fetch('./data.json')
         .then(response => response.json())
         .then(data => {
 
             extensions = data;
 
-            renderFilterButtons(defaultFilter);
-            renderExtensions(defaultFilter);
+            renderFilterButtons(filterState);
+            renderExtensions(filterState);
         })
         .catch(error => {
             console.error('Error rendering extensions:', error);
