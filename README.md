@@ -35,10 +35,10 @@ Users should be able to:
 ### Screenshots
 
 #### Light mode:
-![Light Mode](./assets/screen-captures/Screenshot 2025-07-08 at 7.32.02 PM.jpeg)
+![](assets/screen-captures/Screenshot 2025-07-08 at 7.32.02 PM.jpeg)
 
 #### Dark mode:
-![Dark Mode](./assets/screen-captures/Screenshot 2025-07-08 at 7.32.21 PM.jpeg)
+![](./assets/screen-captures/Screenshot 2025-07-08 at 7.32.21 PM.jpeg)
 
 #### Active filtered:
 ![](./assets/screen-captures/Screenshot 2025-07-08 at 7.32.38 PM.jpeg)
@@ -51,18 +51,9 @@ Users should be able to:
 ![](./assets/screen-captures/Screenshot 2025-07-08 at 7.39.46 PM.jpeg)
 ![](./assets/screen-captures/Screenshot 2025-07-08 at 7.39.53 PM.jpeg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [My solution live URL here](https://cethatch.github.io/browser-extenstion-manager/)
 
 ## My process
 
@@ -92,14 +83,14 @@ A main highlight from this project was the opportunity to familiarize myself wit
 Styling both light and dark modes within a single style sheet was a challenge I had yet to face in previous work. My main goal when approaching this was to avoid redundant CSS from having multiple stylesheets. Instead, I made use of CSS variables, and defined them based on which mode was active. For example:
 
 This defines a light gradient for the ligh-mode background:
-``css
+```css
 body.light-mode {
     --bkg-color: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
 }
 ```
 
 And this defines a dark gradient for the dark-mode background:
-``css
+```css
 body.dark-mode {
     --bkg-color: linear-gradient(180deg, #040918 0%, #091540 100%);
 }
