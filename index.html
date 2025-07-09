@@ -5,42 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link id='theme-stylesheet' rel="stylesheet" type="text/css" href="./styles/light.css">
+  <link id='theme-stylesheet' rel="stylesheet" type="text/css" href="./style.css">
   
   <title>Frontend Mentor | Browser extensions manager UI</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; position: relative; bottom: -30px}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+
 </head>
-<body>
+<body class="light-mode">
 
   <header>
-    <div id="logo-container">
-      <img src="./assets/images/logo.svg" alt="Extension manager logo">
-    </div>
-    <div id="light-dark-button-container">
-      <button id="color-mode">
+      <img id='logo' src="./assets/images/logo-light.svg" alt="Extension manager logo">    
+    <div id="theme-button-container">
+      <button id="theme-button">
         <img id='theme-icon' src="./assets/images/icon-moon.svg">
       </button>
     </div>
   </header>
 
-    <h3>Extensions List</h3>
     
-    <div id="filter-buttons-container"></div>
+    <div class='title-container'>
+      <h2>Extensions List</h2>
+      <div id="filter-buttons-container"></div>
+    </div>
 
-    <div id="tile-container" class="tileContainer"></div>
+    <div id="tile-container" class="tile-container"></div>
     <script src="./extensions.js"></script>
-    
 
-  <div class="attribution">
+    <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/cethatch/browser-extenstion-manager">cethatch</a>.
-  </div>
-
+    </div>
 <script src="./toggleTheme.js"></script>
 </body>
 </html>

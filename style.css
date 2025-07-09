@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.attribution { font-size: 11px; text-align: center; position: relative; bottom: -30px}
+.attribution a { color: hsl(228, 45%, 44%); cursor: pointer;}
+
+body.light-mode {
+    --bkg-color: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --component-bkg: hsl(200, 60%, 99%);
+    --theme-bkg: hsl(0, 0%, 93%);
+
+    --bolded-font-color: hsl(227, 75%, 14%);
+    --paragraph-font-color: hsl(226, 11%, 37%);
+    
+    --outline: hsl(217, 61%, 90%);
+    
+    --filter-on-bkg: hsl(3, 77%, 44%);
+    --filter-off-bkg: var(--component-bkg);
+    --filter-border: 0;
+    --filter-shadow: 0 0 5px var(--outline);
+
+    --header-border: 0;
+    --header-shadow: 0 0 5px var(--outline);
+    
+    --tile-border: 0;
+    --tile-shadow: 0 0 5px var(--outline);
+    
+    --remove-border: 1px solid hsl(0, 0%, 78%);
+    --remove-fill-focus: hsl(0, 0%, 93%);
+    
+    --focus-outline: 2px solid hsl(3, 77%, 44%);
+
+    --toggle-off-bkg: hsl(0, 0%, 78%);
+}
+
+body.dark-mode {
+    --bkg-color: linear-gradient(180deg, #040918 0%, #091540 100%);
+    --component-bkg: hsl(226, 25%, 17%);
+    --theme-bkg: hsl(225, 23%, 24%);
+
+    --bolded-font-color: hsl(0, 0%, 93%);
+    --paragraph-font-color:hsl(217, 61%, 90%);
+    
+    --outline: hsl(226, 11%, 37%);
+    
+    --filter-on-bkg: hsl(3, 86%, 64%);
+    --filter-off-bkg: hsl(225, 23%, 24%);
+    --filter-border: 1x solid var(--outline);
+    --filter-shadow: 0;
+
+    --header-border: 0;
+    --header-shadow: 0;
+    
+    --tile-border: 1px solid var(--outline);
+    --tile-shadow: 0;
+    
+    --remove-border: 1px solid var(--outline);
+    --remove-fill-focus: hsl(225, 23%, 24%);
+    
+    --focus-outline: 2px solid hsl(3, 86%, 64%);
+
+    --toggle-off-bkg: var(--outline);
+}
+
+body {
+    background: var(--bkg-color);
+    margin: 5% 10%;
+    font-family: "Noto Sans", sans-serif;
+    color: var(--bolded-font-color);
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--component-bkg);
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    border: var(--header-border);
+    box-shadow: var(--header-shadow);
+}
+
+button {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    font-size: 16px;
+    color: var(--paragraph-font-color);
+    font-weight: 400;
+}
+
+#theme-button {
+    border: 0;
+    padding: 10px 12px;
+    border-radius: 20%;
+    background-color: var(--theme-bkg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.filter-button {
+    margin-left: 20px;
+    background-color: var(--filter-off-bkg);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: "Noto Sans", sans-serif;
+    color: var(--bolded-font-color);
+    border: var(--filter-border);
+    box-shadow: var(--filter-shadow);
+}
+
+button:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+    transition: .05s;
+}
+
+.filter-buttons-container {
+    margin-left: 15px;
+}
+
+.filterOn {
+    color:var(--component-bkg);
+    background-color:var(--filter-on-bkg);
+
+}
+
+.tile-container {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 10px; 
+}
+
+.tile {
+    background-color: var(--component-bkg);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px var(--outline);
+    max-width: 100%;
+    box-sizing: border-box;   
+    overflow-wrap: break-word;
+    border: var(--tile-border);
+    box-shadow: var(--tile-shadow);
+}
+
+.info-container {
+    display: flex;
+    height: 140px;
+}
+
+.extTextContainer {
+    margin: 0px;
+    margin-left: 15px;
+}
+
+.extDescription {
+    margin-top: 7px;
+}
+
+.extTitle {
+    margin: 0;
+}
+
+.removeAndToggleActiveContainer {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.removeButton {
+    height: 40px;
+    width: 100px; 
+    padding: 0;
+    border-radius: 20px;
+    background-color: var(--component-bkg);
+    font-family: "Noto Sans", sans-serif;
+    color: var(--bolded-font-color);
+    border: var(--remove-border);
+    outline: none;
+}
+
+.removeButton:focus-visible {
+    background-color: var(--remove-fill-focus);
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+    border: 0;
+    transition: .05s;
+}
+
+/* Source: https://www.w3schools.com/howto/howto_css_switch.asp Accessed: 7/8/25 */
+
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+  }
+
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    outline: none;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-off-bkg);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked + .slider {
+    background-color: var(--filter-on-bkg);
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
+}
+
+.toggle input:focus-visible + .slider {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+    transition: .05s;
+}
+
+/* END CITATION */
+
+@media screen and (max-width: 700px) {
+    .title-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .filter-button {
+        margin: 0 10px;
+    }
+
+
+}
+
+

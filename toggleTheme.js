@@ -6,22 +6,26 @@ main();
 
 function main() {
 
-    const toggleButton = document.getElementById('color-mode');
+    const toggleButton = document.getElementById('theme-button');
     toggleButton.addEventListener('click', toggleTheme);
 
 }
 
 function toggleTheme() {
-    let themeLink = document.getElementById('theme-stylesheet');
+
+    const body = document.body;
+    const logo = document.getElementById('logo');
+    const isDark = body.classList.toggle('dark-mode');
+    body.classList.toggle('light-mode', !isDark);
+
     let themeIcon = document.getElementById('theme-icon');
 
-    if (themeLink.getAttribute('href') == './styles/light.css') {
-        themeLink.setAttribute('href', './styles/dark.css');
+    if (isDark) {
+        logo.setAttribute('src', './assets/images/logo-dark.svg');
         themeIcon.setAttribute('src', './assets/images/icon-sun.svg');
-        console.log('switched to dark mode');
-    } else if (themeLink.getAttribute('href') == './styles/dark.css') {
-        themeLink.setAttribute('href', './styles/light.css');
+    } else {
+        logo.setAttribute('src', './assets/images/logo-light.svg');
         themeIcon.setAttribute('src', './assets/images/icon-moon.svg');
-        console.log('switched to light mode');
     }
+
 }

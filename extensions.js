@@ -25,7 +25,7 @@ function renderExtensions(filter) {
         tile.className = 'tile';
 
         const infoContainer = document.createElement('div');
-        infoContainer.className = 'infoContainer';
+        infoContainer.className = 'info-container';
 
         const extLogoContainer = document.createElement('div');
         extLogoContainer.className = 'extLogoContainer';
@@ -38,7 +38,7 @@ function renderExtensions(filter) {
         const extTextContainer = document.createElement('div');
         extTextContainer.className = 'extTextContainer';
 
-        const extTitle = document.createElement('h4');
+        const extTitle = document.createElement('h3');
         extTitle.className = 'extTitle';
         extTitle.textContent = extension.name;
 
@@ -111,7 +111,7 @@ function renderFilterButtons(filterState) {
     filterOptions.forEach(filter => {
         const button = document.createElement('button');
         button.innerText = filter;
-        button.classList.add('filterButton');
+        button.classList.add('filter-button');
 
         if (filter == filterState) {
             button.classList.add('filterOn');
