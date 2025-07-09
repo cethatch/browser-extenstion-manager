@@ -142,7 +142,7 @@ button:focus-visible {
     margin-left: 15px;
 }
 
-.filterOn {
+.filter-on {
     color:var(--component-bkg);
     background-color:var(--filter-on-bkg);
 
@@ -173,27 +173,27 @@ button:focus-visible {
     height: 140px;
 }
 
-.extTextContainer {
+.ext-text-container {
     margin: 0px;
     margin-left: 15px;
 }
 
-.extDescription {
+.ext-description {
     margin-top: 7px;
 }
 
-.extTitle {
+.ext-title {
     margin: 0;
 }
 
-.removeAndToggleActiveContainer {
+.remove-and-toggle-active-container {
     margin-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.removeButton {
+.remove-button {
     height: 40px;
     width: 100px; 
     padding: 0;
@@ -205,7 +205,7 @@ button:focus-visible {
     outline: none;
 }
 
-.removeButton:focus-visible {
+.remove-button:focus-visible {
     background-color: var(--remove-fill-focus);
     outline: var(--focus-outline);
     outline-offset: 2px;
@@ -286,8 +286,4 @@ input:checked + .slider:before {
     .filter-button {
         margin: 0 10px;
     }
-
-
 }
-
-

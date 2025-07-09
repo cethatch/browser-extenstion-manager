@@ -29,22 +29,22 @@ function renderExtensions() {
         infoContainer.className = 'info-container';
 
         const extLogoContainer = document.createElement('div');
-        extLogoContainer.className = 'extLogoContainer';
+        extLogoContainer.className = 'ext-logo-container';
 
         const logo = document.createElement('img');
-        logo.className = 'extLogo';
+        logo.className = 'ext-logo';
         logo.src = extension.logo;
         logo.alt = extension.name;
 
         const extTextContainer = document.createElement('div');
-        extTextContainer.className = 'extTextContainer';
+        extTextContainer.className = 'ext-text-container';
 
         const extTitle = document.createElement('h3');
-        extTitle.className = 'extTitle';
+        extTitle.className = 'ext-title';
         extTitle.textContent = extension.name;
 
         const extDescription = document.createElement('p');
-        extDescription.className = 'extDescription';
+        extDescription.className = 'ext-description';
         extDescription.textContent = extension.description;
 
         extLogoContainer.appendChild(logo);
@@ -55,10 +55,10 @@ function renderExtensions() {
         infoContainer.appendChild(extTextContainer);
 
         const removeAndToggleActiveContainer = document.createElement('div');
-        removeAndToggleActiveContainer.className = 'removeAndToggleActiveContainer';
+        removeAndToggleActiveContainer.className = 'remove-and-toggle-active-container';
 
         const removeButton = document.createElement('button');
-        removeButton.className = 'removeButton';
+        removeButton.className = 'remove-button';
         removeButton.innerText = 'Remove';
         removeButton.addEventListener('click', () => {
             if (confirm(`Are you sure you want to delete ${extension.name}?`)) {
@@ -115,9 +115,9 @@ function renderFilterButtons() {
         button.classList.add('filter-button');
 
         if (option == filterState) {
-            button.classList.add('filterOn');
+            button.classList.add('filter-on');
         } else {
-            button.classList.add('filterOff');
+            button.classList.add('filter-off');
         }
 
         button.addEventListener('click', () => {
