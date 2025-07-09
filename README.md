@@ -38,18 +38,18 @@ Users should be able to:
 ![](assets/screen-captures/light-mode.jpeg)
 
 #### Dark mode:
-![](./assets/screen-captures/Screenshot 2025-07-08 at 7.32.21 PM.jpeg)
+![](./assets/screen-captures/dark-mode.jpeg)
 
 #### Active filtered:
-![](./assets/screen-captures/Screenshot 2025-07-08 at 7.32.38 PM.jpeg)
+![](./assets/screen-captures/active-filtered.jpeg)
 
 #### Inactive filtered:
-![](./assets/screen-captures/Screenshot 2025-07-08 at 7.32.44 PM.jpeg)
+![](./assets/screen-captures/inactive-filtered.jpeg)
 
 #### Dynamic columns that respond to window resizing:
-![](./assets/screen-captures/Screenshot 2025-07-08 at 7.39.37 PM.jpeg)
-![](./assets/screen-captures/Screenshot 2025-07-08 at 7.39.46 PM.jpeg)
-![](./assets/screen-captures/Screenshot 2025-07-08 at 7.39.53 PM.jpeg)
+![](./assets/screen-captures/dynamic-resizing-1.jpeg)
+![](./assets/screen-captures/dynamic-resizing-2.jpeg)
+![](./assets/screen-captures/dynamic-resizing-3.jpeg)
 
 ### Links
 
