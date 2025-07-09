@@ -35,25 +35,20 @@ Users should be able to:
 ### Screenshots
 
 #### Light mode:
-![](assets/screen-captures/light-mode.jpeg)
+<div align="center"><img src="./assets/screen-captures/light-mode.jpeg" alt="Light mode styles" height="700px"/></div>
 
 #### Dark mode:
-![](./assets/screen-captures/dark-mode.jpeg)
+<div align="center"><img src="./assets/screen-captures/dark-mode.jpeg" alt="Dark mode styles" height="700px"/></div>
 
-#### Active filtered:
-![](./assets/screen-captures/active-filtered.jpeg)
-
-#### Inactive filtered:
-![](./assets/screen-captures/inactive-filtered.jpeg)
+#### Filtering for active/inactive state:
+<div align="center"><img src="./assets/screen-captures/active-filtered.jpeg" alt="Extensions filtered for active state" height="500px"/><img src="./assets/screen-captures/inactive-filtered.jpeg" alt="Extensions filtered for inactive state" height="500px"/></div>
 
 #### Dynamic columns that respond to window resizing:
-![](./assets/screen-captures/dynamic-resizing-1.jpeg)
-![](./assets/screen-captures/dynamic-resizing-2.jpeg)
-![](./assets/screen-captures/dynamic-resizing-3.jpeg)
+<div align="center"><img src="./assets/screen-captures/dynamic-resizing-1.jpeg" alt="dynamic column resizing example 1" height="400px"/><img src="./assets/screen-captures/dynamic-resizing-2.jpeg" alt="dynamic column resizing example 2" height="400px"/><img src="./assets/screen-captures/dynamic-resizing-3.jpeg" alt="dynamic column resizing example 3" height="400px"/></div>
 
 ### Links
 
-- Live Site URL: [My solution live URL here](https://cethatch.github.io/browser-extenstion-manager/)
+- To see the live site click here: [My solution](https://cethatch.github.io/browser-extenstion-manager/)
 
 ## My process
 
@@ -80,7 +75,7 @@ A main highlight from this project was the opportunity to familiarize myself wit
 }
 ```
 
-Styling both light and dark modes within a single style sheet was a challenge I had yet to face in previous work. My main goal when approaching this was to avoid redundant CSS from having multiple stylesheets. Instead, I made use of CSS variables, and defined them based on which mode was active. For example:
+Styling both light and dark modes within a single style sheet was a challenge I had yet to face in previous work. My main goal when approaching this was to avoid redundant CSS in multiple stylesheets. Instead, I made use of CSS variables, and defined them based on which mode was active. For example:
 
 This defines a light gradient for the ligh-mode background:
 ```css
@@ -96,7 +91,13 @@ body.dark-mode {
 }
 ```
 
-Both utilize the same variable name ```---bkg-color``` which can be used to define the background color for the body element.
+Both utilize the same variable name ```---bkg-color``` which can be used to define the background color for the body element:
+
+```css
+body {
+  background: var(--bkg-color);
+}
+```
 
 ### Continued development
 
